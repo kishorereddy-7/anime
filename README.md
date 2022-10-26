@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0b2d8b80-6917-41dd-89aa-2745d19ed897/deploy-status)](https://app.netlify.com/sites/f-music/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

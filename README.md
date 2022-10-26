@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0b2d8b80-6917-41dd-89aa-2745d19ed897/deploy-status)](https://app.netlify.com/sites/f-music/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e96d5b40-7ce5-42b0-8b89-a34b83d96473/deploy-status)](https://app.netlify.com/sites/crazy-anime/deploys)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

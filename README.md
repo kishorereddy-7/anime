@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e96d5b40-7ce5-42b0-8b89-a34b83d96473/deploy-status)](https://app.netlify.com/sites/crazy-anime/deploys)
+
+[Link](https://crazy-anime.netlify.app/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

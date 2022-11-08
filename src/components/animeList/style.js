@@ -10,6 +10,6 @@ export const BodyWrapper = styled.div`
 
 export const MainWrapper = styled.div`
     background-color: #e1e6e2;
-    max-height: -webkit-fill-available;;
+    min-height: 750px;
     overflow-y: auto;
 `;

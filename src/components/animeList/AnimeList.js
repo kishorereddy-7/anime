@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import AnimeItem from "./animeItem/AnimeItem";
 import * as S from "./style";
-import { Spinner } from 'react-bootstrap';
+import Loader from "../utiles/Loader";
+import _find from 'lodash/find'
 
-export default function AnimeList({ lang }) {
+export default function AnimeList({ lang, searchWord }) {
   const [animeItems, setAnimeItems] = useState([]);
   const [loadAnimeList, setLoadAnimeList] = useState(true);
 
   useEffect(() => {
-    let page = 100
+    let page = 100;
     fetch(`https://api.jikan.moe/v4/anime?=${page}`)
       .then((response) => response.json())
       .then((data) => {
@@ -21,15 +22,18 @@ export default function AnimeList({ lang }) {
   }, []);
 
   const renderAnimeList = () => {
-    if (loadAnimeList) {
-      return (
-        <Spinner animation="border" variant="primary" />
-      );
-    } else {
-    const animeNodes = animeItems.map((item, index) => <AnimeItem lang={lang} key={index} anime={item} />);
+    const animeNodes = animeItems.filter((item) => {
+      let title = _find(item.titles, (item) => item.type === "Default")
+      return title.title.toLowerCase().includes(searchWord.toLowerCase())
+    }).map((item, index) => (
+      <AnimeItem lang={lang} key={index} anime={item} />
+    ));
     return <S.BodyWrapper>{animeNodes}</S.BodyWrapper>;
-    }
   };
 
-  return <S.MainWrapper>{renderAnimeList()}</S.MainWrapper>
+  return (
+    <S.MainWrapper>
+      {loadAnimeList ? <Loader /> : renderAnimeList()}
+    </S.MainWrapper>
+  );
 }
